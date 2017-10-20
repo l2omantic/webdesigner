@@ -1,0 +1,8 @@
+syntax: glob
+*~
+logs/access_log
+docker/data/
+docker/log
+docker/log7
+
+

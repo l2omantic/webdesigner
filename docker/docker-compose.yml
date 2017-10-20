@@ -1,0 +1,48 @@
+version: '3'
+services:
+  wp_apache:
+    image: "salamander1/apache2-php7"    
+    container_name: wp_apache
+    ports:
+     - "80:80"
+    volumes:
+     - "./../:/var/www/html/"     
+     - "./log7:/var/log/apache2"
+     
+  wp_mariadb:
+    image: mariadb    
+    container_name: wp_mariadb
+    #ports:
+    #  - "3306:3306"
+    restart: always
+    volumes:
+      - "./data/:/var/lib/mysql"
+      - "./init/:/docker-entrypoint-initdb.d"
+    environment:
+      MYSQL_ROOT_PASSWORD: passpass
+      MYSQL_USER: pd_web1
+      MYSQL_PASSWORD: passpass
+      MYSQL_DATABASE: web1
+      
+  wp_phpmyadmin:
+    container_name: wp_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "81:80"
+    volumes:
+    - "./config/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php"
+    - "./config/config.inc.php:/etc/phpmyadmin/config.inc.php"
+    environment:
+      PMA_HOST: wp_mariadb
+      PMA_USER: root
+      PMA_PASSWORD: passpass
+
+  wp_pureftpd:
+    image: vimagick/pure-ftpd
+    ports:
+    - "21:21"
+    volumes:
+    - ./test_ftp/ftpuser:/home/ftpuser
+    - ./test_ftp/pure-ftpd:/etc/pure-ftpd
+    privileged: true
+    restart: always  
