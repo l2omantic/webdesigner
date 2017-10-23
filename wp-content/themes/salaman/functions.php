@@ -2923,67 +2923,89 @@ if ( ! function_exists( 'salaman_enqueue_scripts' ) ) :
 
     /* Pinegrow generated Enqueue Scripts Begin */
 
+    wp_deregister_script( 'jquerymenu' );
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/menu.js', false, null, true);
+
     wp_deregister_script( 'jquery' );
-    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.11.1.min.js', false, null, true);
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/jquery-3.2.1.min.js', false, null, true);
+
+    wp_deregister_script( 'bootstrap-bundle' );
+    wp_enqueue_script( 'bootstrap-bundle', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.bundle.js', false, null, true);
+
+    wp_deregister_script( 'bootstrap-bundle-min' );
+    wp_enqueue_script( 'bootstrap-bundle-min', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.bundle.min.js', false, null, true);
+
+    // wp_deregister_script( 'bootstrap' );
+    // wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.js', false, null, true);
 
     wp_deregister_script( 'bootstrap' );
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', false, null, true);
+    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', false, null, true);
 
-    wp_deregister_script( 'script-1' );
-    wp_enqueue_script( 'script-1', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
 
-    wp_deregister_script( 'script-2' );
-    wp_enqueue_script( 'script-2', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
+    // wp_deregister_script( 'script-2' );
+    // wp_enqueue_script( 'script-2', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
 
-    wp_deregister_script( 'script-3' );
-    wp_enqueue_script( 'script-3', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
+    // wp_deregister_script( 'script-3' );
+    // wp_enqueue_script( 'script-3', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
 
-    wp_deregister_script( 'script-4' );
-    wp_enqueue_script( 'script-4', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
+    // wp_deregister_script( 'script-4' );
+    // wp_enqueue_script( 'script-4', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
 
-    wp_deregister_script( 'script-5' );
-    wp_enqueue_script( 'script-5', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
+    // wp_deregister_script( 'script-5' );
+    // wp_enqueue_script( 'script-5', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
 
-    wp_deregister_script( 'script-6' );
-    wp_enqueue_script( 'script-6', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
+    // wp_deregister_script( 'script-6' );
+    // wp_enqueue_script( 'script-6', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
 
-    wp_deregister_script( 'script-7' );
-    wp_enqueue_script( 'script-7', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
+    // wp_deregister_script( 'script-7' );
+    // wp_enqueue_script( 'script-7', 'https://maps.google.com/maps/api/js?sensor=true', false, null, true);
 
     /* Pinegrow generated Enqueue Scripts End */
 
 
     /* Pinegrow generated Enqueue Styles Begin */
 
-    wp_deregister_style( 'bootstrap' );
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', false, null, 'all');
+    wp_deregister_style( 'Cssmenu' );
+    wp_enqueue_style( 'Cssmenu', get_template_directory_uri() . '/assets/css/menu-styles.css', false, null, 'all');
 
-    wp_deregister_style( 'dashboard' );
-    wp_enqueue_style( 'dashboard', get_template_directory_uri() . '/css/dashboard.css', false, null, 'all');
+    // wp_deregister_style( 'bootstrap' );
+    // wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', false, null, 'all');
 
-    wp_deregister_style( 'stylelibrary' );
-    wp_enqueue_style( 'stylelibrary', get_template_directory_uri() . '/css/style-library-1.css', false, null, 'all');
+    wp_deregister_style( 'bootstrap-min' );
+    wp_enqueue_style( 'bootstrap-min', get_template_directory_uri() . '/assets/css/bootstrap.min.css', false, null, 'all');
+
+    // wp_deregister_style( 'bootstrap-gird' );
+    // wp_enqueue_style( 'bootstrap-gird', get_template_directory_uri() . '/assets/css/bootstrap-grid.css', false, null, 'all');
+
+    wp_deregister_style( 'bootstrap-gird-min' );
+    wp_enqueue_style( 'bootstrap-gird-min', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap-grid.min.css', false, null, 'all');
+
+    // wp_deregister_style( 'bootstrap-reboot' );
+    // wp_enqueue_style( 'bootstrap-reboot', get_template_directory_uri() . '/assets/css/bootstrap-reboot.css', false, null, 'all');
+
+    wp_deregister_style( 'bootstrap-reboot-min' );
+    wp_enqueue_style( 'bootstrap-reboot-min', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap-reboot.min.css', false, null, 'all');
 
     wp_deregister_style( 'blocks' );
-    wp_enqueue_style( 'blocks', get_template_directory_uri() . '/css/blocks.css', false, null, 'all');
+    wp_enqueue_style( 'blocks', get_template_directory_uri() . '/assets/css/business-frontpage.css', false, null, 'all');
 
-    wp_deregister_style( 'custom' );
-    wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css', false, null, 'all');
+    // wp_deregister_style( 'custom' );
+    // wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css', false, null, 'all');
 
-    wp_deregister_style( 'fontawesome' );
-    wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', false, null, 'all');
+    // wp_deregister_style( 'fontawesome' );
+    // wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', false, null, 'all');
 
-    wp_deregister_style( 'history' );
-    wp_enqueue_style( 'history', get_template_directory_uri() . '/css/history.css', false, null, 'all');
+    // wp_deregister_style( 'history' );
+    // wp_enqueue_style( 'history', get_template_directory_uri() . '/css/history.css', false, null, 'all');
 
-    wp_deregister_style( 'form-job' );
-    wp_enqueue_style( 'form-job', get_template_directory_uri() . '/css/form-job.css', false, null, 'all');
+    // wp_deregister_style( 'form-job' );
+    // wp_enqueue_style( 'form-job', get_template_directory_uri() . '/css/form-job.css', false, null, 'all');
 
-    wp_deregister_style( 'our-services' );
-    wp_enqueue_style( 'our-services', get_template_directory_uri() . '/css/our-services.css', false, null, 'all');
+    // wp_deregister_style( 'our-services' );
+    // wp_enqueue_style( 'our-services', get_template_directory_uri() . '/css/our-services.css', false, null, 'all');
 
-    wp_deregister_style( 'plugins' );
-    wp_enqueue_style( 'plugins', get_template_directory_uri() . '/css/plugins.css', false, null, 'all');
+    // wp_deregister_style( 'plugins' );
+    // wp_enqueue_style( 'plugins', get_template_directory_uri() . '/css/plugins.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 

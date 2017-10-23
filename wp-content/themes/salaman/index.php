@@ -3,7 +3,8 @@ get_header(); ?>
 
 <header id="header-1" class="header-1">
     <!-- Navbar -->
-    <?php wp_nav_menu(); ?>
+   <?php include('header-page.php'); ?>
+
     <!--// End Navbar -->
 </header>
 <main class="pg-empty-placeholder">

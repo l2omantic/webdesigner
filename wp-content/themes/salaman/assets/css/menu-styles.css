@@ -1,0 +1,239 @@
+.menu-nav{
+  background-color: inherit;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav >.active a{
+  background: inherit;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
+  background: #d70000;
+  color: #ffffff;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu{
+  display: block !important;
+}
+
+#header-1 .main-nav .nav{
+  position: relative;
+  top: 25px;
+  right: 0;
+}
+
+#header-1 .main-nav .navbar-nav li:hover >a {
+  background: #d70000;
+  color: #ffffff;
+}
+#header-1 .main-nav .navbar-nav > li a{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  padding: 10px 9px;
+  white-space: normal;
+  -moz-padding-end: 1px !important;
+}
+
+#header-1 .main-nav .navbar-nav li a:hover {
+  background: #d70000;
+  color: #ffffff;
+}
+
+#header-1 .main-nav .nav .dropdown-menu li a:hover {
+  background: #d70000;
+}
+
+#header-1 .main-nav .nav .dropdown .open:focus{
+  background: #d70000;
+}
+
+#header-1 .main-nav .navbar-nav > li a > .open{
+  color: #ffffff;
+}
+
+.dropdown-submenu{
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu2 {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+}
+
+.dropdown-submenu > .open , .dropdown-menu > .open{
+  display : block;
+}
+
+.dropdown-submenu:hover>.dropdown-menu2 {
+  display: block;
+}
+
+.dropdown-menu2{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 240px;
+  padding: 5px 0;
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #000;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.carret2 > a:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  top: 14px;
+  right: 10px;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent transparent #ffffff;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+
+}
+
+
+
+@media (max-width: 767px){
+  #header-1 .main-nav .nav{
+    position: inherit;
+  }
+
+  #header-1 .navbar-collapse{
+    background: #000000;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #header-1 .main-nav .navbar-nav > li.active a{
+    color: #ffffff;
+  }
+  #header-1 .main-nav .navbar-nav > li a{
+    color: #ffffff;
+  }
+  #header-1 .main-nav .nav .dropdown-menu{
+    width: 100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: none;
+    text-transform: none;
+    min-width: 240px;
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    margin: 0;
+    left: 0;
+    max-width: 0px;
+  }
+}
+
+
+/********************************************/
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1050; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.sidenav ul li a{
+  width: 100%;
+  border-top: 1px solid #444;
+}
+
+.sidenav ul li a:hover{
+  background: #a71e25;
+}
+
+ul .ul_hide{
+  margin: 0 0 0 30px;
+}
+
+.sidenav .toggle a:hover{
+  color: #a71e24;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 60px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.caret2{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  float: right;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+
+.closenav{
+
+}
+/************************************************************/
+
+
